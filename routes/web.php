@@ -40,6 +40,7 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::get('/table_close',[\App\Http\Controllers\Admin\HomeController::class,'tableclose'])->name('admin_table_close');
     Route::post('/table_close_add',[\App\Http\Controllers\Admin\HomeController::class,'tablecloseadd'])->name('admin_table_close_add');
     Route::get('/data_table',[\App\Http\Controllers\Admin\HomeController::class,'datatable'])->name('admin_data_table');
+    Route::get('/data_table/delete/{id}',[\App\Http\Controllers\Admin\HomeController::class,'destroy'])->name('admin_data_table_delete');
     Route::get('/calendar',[\App\Http\Controllers\Admin\HomeController::class,'calendar'])->name('admin_calendar');
 
 

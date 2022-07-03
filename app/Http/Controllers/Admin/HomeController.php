@@ -59,6 +59,13 @@ class HomeController extends Controller
         return view ('admin.datatables',['datalist'=>$datalist]);
 
     }
+
+    public function destroy(Request $request,$id)
+    {
+      DB::table('rezervations')->where('id','=',$id)->delete();
+      return redirect()->route('admin_data_table');
+
+    }
     public function calendar()
     {
         return view ('admin.calendar');

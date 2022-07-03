@@ -364,33 +364,6 @@
 
                     <form method="GET" >
 
-                        <div>
-                            <h4>AÇMA</h4>
-                            <input type="checkbox" name="employed"    id="employed_v0" value="12:00PM"  /> 12:00 PM
-                            <input type="checkbox" name="employedd"    id="employed_v2" value="Yes" /> 12:30 PM <br>
-                            <input type="checkbox" name="employed1"    id="employed_v4" value="Yes" /> 01:00 PM
-                            <input type="checkbox" name="employed13"    id="employed_v6" value="Yes" /> 01:30 PM <br>
-                            <input type="checkbox" name="employed2"    id="employed_v8" value="Yes"  /> 02:00 PM
-                            <input type="checkbox" name="employed23"    id="employed_v10" value="Yes"  /> 02:30 PM<br>
-                            <input type="checkbox" name="employed3"    id="employed_v12" value="Yes"  /> 03:00 PM
-                            <input type="checkbox" name="employed33"    id="employed_v14" value="Yes"  /> 03:30 PM<br>
-                            <input type="checkbox" name="employed4"    id="employed_v16" value="Yes"  /> 04:00 PM
-                            <input type="checkbox" name="employed43"    id="employed_v18" value="Yes"  /> 04:30 PM<br>
-                            <input type="checkbox" name="employed5"    id="employed_v20" value="Yes"  /> 05:00 PM
-                            <input type="checkbox" name="employed53"    id="employed_v22" value="Yes"  /> 05:30 PM<br>
-                            <input type="checkbox" name="employed6"    id="employed_v24" value="Yes"  /> 06:00 PM
-                            <input type="checkbox" name="employed63"    id="employed_v26" value="Yes"  /> 06:30 PM<br>
-                            <input type="checkbox" name="employed7"    id="employed_v28" value="Yes"  /> 07:00 PM
-                            <input type="checkbox" name="employed73"    id="employed_v30" value="Yes"  /> 07:30 PM<br>
-                            <input type="checkbox" name="employed8"    id="employed_v32" value="Yes"  /> 08:00 PM
-                            <input type="checkbox" name="employed83"    id="employed_v34" value="Yes"  /> 08:30 PM<br>
-                            <input type="checkbox" name="employed9"    id="employed_v36" value="Yes"  /> 09:00 PM
-                            <input type="checkbox" name="employed93"    id="employed_v38" value="Yes"  /> 09:30 PM<br>
-                            <input type="checkbox" name="employed10"    id="employed_v40" value="Yes" /> 10:00 PM
-                            <input type="checkbox" name="employed103"    id="employed_v42" value="Yes"  /> 10:30 PM<br>
-                            <input type="checkbox" name="employedall"    id="employed_all" value="Yes"  /> ALL<br>
-
-                        </div>
 
                         <div>
 
@@ -405,7 +378,7 @@
                             <input type="checkbox" name="employed33"   id="employed_v15" value="No"  /> 03:30 PM<br>
                             <input type="checkbox" name="employed4"   id="employed_v17" value="No"  /> 04:00 PM
                             <input type="checkbox" name="employed43"   id="employed_v19" value="No"  /> 04:30 PM<br>
-                            <input type="checkbox" name="employed5"   id="employed_v21" value="No" /> 05:00 PM
+                            <input type="checkbox" name="employed5"   id="employed_v21" value="05:00PM" /> 05:00 PM
                             <input type="checkbox" name="employed53"   id="employed_v23" value="No"  /> 05:30 PM<br>
                             <input type="checkbox" name="employed6"   id="employed_v25" value="No" /> 06:00 PM
                             <input type="checkbox" name="employed63"   id="employed_v27" value="No" /> 06:30 PM<br>
@@ -423,7 +396,7 @@
                         <div>
                             <select id="all">
                                 <option >Select</option>
-                                <option   id="12"  >12:00 PM</option>
+                                <option id="12"  >12:00 PM</option>
                                 <option id="12_3" >12:30 PM</option>
                                 <option id="1" >01:00 PM</option>
                                 <option id="1_3" >01:30 PM</option>
@@ -448,12 +421,6 @@
 
                             </select>
                         </div>
-                          <div>
-                              <h4>Masa Aç</h4>
-                              <input type="checkbox" name="employeda"    id="employed_2" value="Yes"  /> 2<br>
-                              <input type="checkbox" name="employedac"    id="employed_4" value="Yes" /> 4 <br>
-                              <input type="checkbox" name="employedacc"    id="employed_6" value="Yes" /> 6
-                          </div>
 
                         <div>
                             <h4>Masa Kapa</h4>
@@ -467,20 +434,11 @@
                                       <option id="2k" >2</option>
                                       <option id="4k" >4</option>
                                       <option id="6k" >6</option>
-
                                   </select>
                           </div>
 
-                        <div><input  type="submit" value="Submit"></div>
+                        <div> <input onclick="k12()" type="submit" value="Submit"></div>
 
-                        <select id="all">
-                            <option >Select</option>
-                            <option  > <?php
-                                echo $id = $_GET['employed'];
-                                ?></option>
-                            <option id="12_3" >12:30 PM</option>
-                            <option id="1" >01:00 PM</option>
-                        </select>
                     </form>
 
 
@@ -683,255 +641,6 @@
 </html>
 
 
-<!--<script>
-    $('.check').change(function(e){
-        $(this).siblings().prop('checked',false)
-        var value = $(this).val();
-        if(value == 'group') {
-            $('#1').prop('disabled', false);
-        }else if(value == '1k') {
-            $('#1').prop('disabled', true);
-        }else if(value == '') {
-            $('#1').prop('disabled', false);
-        }
-
-    })
-
-    $('.check').change(function(e){
-        $(this).siblings().prop('checked',false)
-        var value = $(this).val();
-        if(value == 'group') {
-            $('#2').prop('disabled', false);
-        }else if(value == '2k') {
-            $('#2').prop('disabled', true);
-        }else if(value == '') {
-            $('#2').prop('disabled', false);
-        }
-
-    })
-
-    $('.check').change(function(e){
-        $(this).siblings().prop('checked',false)
-        var value = $(this).val();
-        if(value == 'group') {
-            $('#3').prop('disabled', false);
-        }else if(value == '3k') {
-            $('#3').prop('disabled', true);
-        }else if(value == '') {
-            $('#3').prop('disabled', false);
-        }
-
-    })
-    $('.check').change(function(e){
-        $(this).siblings().prop('checked',false)
-        var value = $(this).val();
-        if(value == 'group') {
-            $('#4').prop('disabled', false);
-        }else if(value == '4k') {
-            $('#4').prop('disabled', true);
-        }else if(value == '') {
-            $('#4').prop('disabled', false);
-        }
-
-    })
-
-
-
-</script>-->
-
-<!--buttonla kapatma fonksiyonu
-<script>
-    function myFunction() {
-        document.getElementById("x").disabled = true;
-        document.getElementById("y").disabled = true;
-        document.getElementById("z").disabled = true;
-        document.getElementById("d").disabled = true;
-    }
-</script>-->
-
-<!--<script>
-
-    function k12() {
-
-        document.getElementById("12").disabled = true;
-
-
-    }
-
-    function a12() {
-        document.getElementById("12").disabled = false;
-    }
-
-    function k12_3() {
-        document.getElementById("12_3").disabled = true;
-    }
-
-    function a12_3() {
-        document.getElementById("12_3").disabled = false;
-    }
-
-    function k1() {
-        document.getElementById("1").disabled = true;
-    }
-
-    function a1() {
-        document.getElementById("1").disabled = false;
-    }
-    function k1_3() {
-        document.getElementById("1_3").disabled = true;
-    }
-
-    function a1_3() {
-        document.getElementById("1_3").disabled = false;
-    }
-
-    function k2() {
-        document.getElementById("2").disabled = true;
-    }
-
-    function a2() {
-        document.getElementById("2").disabled = false;
-    }
-
-    function k2_3() {
-        document.getElementById("2_3").disabled = true;
-    }
-
-    function a2_3() {
-        document.getElementById("2_3").disabled = false;
-    }
-
-    function k3() {
-        document.getElementById("3").disabled = true;
-    }
-
-    function a3() {
-        document.getElementById("3").disabled = false;
-    }
-    function k3_3() {
-        document.getElementById("3_3").disabled = true;
-    }
-
-    function a3_3() {
-        document.getElementById("3_3").disabled = false;
-    }
-
-    function k4() {
-        document.getElementById("4").disabled = true;
-    }
-
-    function a4() {
-        document.getElementById("4").disabled = false;
-    }
-    function k4_3() {
-        document.getElementById("4_3").disabled = true;
-    }
-
-    function a4_3() {
-        document.getElementById("4_3").disabled = false;
-    }
-
-    function k5() {
-        document.getElementById("5").disabled = true;
-    }
-
-    function a5() {
-        document.getElementById("5").disabled = false;
-    }
-
-    function k5_3() {
-        document.getElementById("5_3").disabled = true;
-    }
-
-    function a5_3() {
-        document.getElementById("5_3").disabled = false;
-    }
-
-    function k6() {
-        document.getElementById("6").disabled = true;
-    }
-
-    function a6() {
-        document.getElementById("6").disabled = false;
-    }
-
-    function k6_3() {
-        document.getElementById("6_3").disabled = true;
-    }
-
-    function a6_3() {
-        document.getElementById("6_3").disabled = false;
-    }
-
-    function k7() {
-        document.getElementById("7").disabled = true;
-    }
-
-    function a7() {
-        document.getElementById("7").disabled = false;
-    }
-
-    function k7_3() {
-        document.getElementById("7_3").disabled = true;
-    }
-
-    function a7_3() {
-        document.getElementById("7_3").disabled = false;
-    }
-
-    function k8() {
-        document.getElementById("8").disabled = true;
-    }
-
-    function a8() {
-        document.getElementById("8").disabled = false;
-    }
-    function k8_3() {
-        document.getElementById("8_3").disabled = true;
-    }
-
-    function a8_3() {
-        document.getElementById("8_3").disabled = false;
-    }
-
-    function k9() {
-        document.getElementById("9").disabled = true;
-    }
-
-    function a9() {
-        document.getElementById("9").disabled = false;
-    }
-    function k9_3() {
-        document.getElementById("9_3").disabled = true;
-    }
-
-    function a9_3() {
-        document.getElementById("9_3").disabled = false;
-    }
-
-    function k10() {
-        document.getElementById("10").disabled = true;
-    }
-
-    function a10() {
-        document.getElementById("10").disabled = false;
-    }
-    function k10_3() {
-        document.getElementById("10_3").disabled = true;
-    }
-
-    function a10_3() {
-        document.getElementById("10_3").disabled = false;
-    }
-
-    function k_all() {
-        document.getElementById("all").disabled = true;
-    }
-
-    function a_all() {
-        document.getElementById("all").disabled = false;
-    }
-</script>-->
 
 <script>
 
@@ -1223,12 +932,12 @@
 
     <!--5için-->
     $(document).ready(function(){
-        if(localStorage.getItem("itmEmployeb") == "Yes")
+        if(localStorage.getItem("itmEmployeb") == "05:00PM")
             $("#employed_v20").prop("checked", true);
         else
             $("#employed_v21").prop("checked", true);
 
-        if(localStorage.getItem("itmEmployeb") == "Yes")
+        if(localStorage.getItem("itmEmployeb") == "05:00PM")
             $("#5").prop("disabled", false);
         else
             $("#5").prop("disabled", true);
@@ -1238,7 +947,7 @@
         $("[name=employed5]").on("change", function(){
             localStorage.setItem("itmEmployeb", $(this).val());
 
-            if($(this).val() == "Yes")
+            if($(this).val() == "05:00PM")
                 $("#5").prop("disabled", false);
             else
                 $("#5").prop("disabled", true);
@@ -1280,20 +989,20 @@
 
     <!--6için-->
     $(document).ready(function(){
-        if(localStorage.getItem("itmEmployes") == "Yes")
+        if(localStorage.getItem("itmEmploye8") == "Yes")
             $("#employed_v24").prop("checked", true);
         else
             $("#employed_v25").prop("checked", true);
 
-        if(localStorage.getItem("itmEmployes") == "Yes")
+        if(localStorage.getItem("itmEmploye8") == "Yes")
             $("#6").prop("disabled", false);
         else
             $("#6").prop("disabled", true);
 
-        $("#6").val(localStorage.getItem("itmTests"));
+        $("#6").val(localStorage.getItem("itmTest8"));
 
         $("[name=employed6]").on("change", function(){
-            localStorage.setItem("itmEmployes", $(this).val());
+            localStorage.setItem("itmEmploye8", $(this).val());
 
             if($(this).val() == "Yes")
                 $("#6").prop("disabled", false);
@@ -1302,7 +1011,7 @@
         });
 
         $("#6").on("change", function(){
-            localStorage.setItem("itmTests", $(this).val());
+            localStorage.setItem("itmTest8", $(this).val());
         });
 
     });
@@ -1659,6 +1368,8 @@
         });
 
     });
+
+
 
 </script>
 

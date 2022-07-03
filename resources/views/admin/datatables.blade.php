@@ -357,17 +357,17 @@
                                     </thead>
                                     <tbody>
                                     @foreach($datalist as $rs)
-                                    <tr>
-                                        <td>{{$rs->name}}</td>
-                                        <td>{{$rs->r_date}}</td>
-                                        <td>{{$rs->time_a}}</td>
-                                        <td>{{$rs->time_b}}</td>
-                                        <td>{{$rs->person}}</td>
-                                        <td>{{$rs->phone}}</td>
-                                        <td>{{$rs->Email}}</td>
-                                        <td>{{$rs->note}}</td>
-                                        <td><button type="button" class="btn btn-danger">Delete</button></td>
-                                    </tr>
+                                        <tr>
+                                            <td>{{$rs->name}}</td>
+                                            <td>{{$rs->r_date}}</td>
+                                            <td>{{$rs->time_a}}</td>
+                                            <td>{{$rs->time_b}}</td>
+                                            <td>{{$rs->person}}</td>
+                                            <td>{{$rs->phone}}</td>
+                                            <td>{{$rs->Email}}</td>
+                                            <td>{{$rs->note}}</td>
+                                            <td><button type="button" class="btn btn-danger"><a href="{{route('admin_data_table_delete',['id'=>$rs->id])}}"> Delete</a></button></td>
+                                        </tr>
                                     @endforeach
 
 
